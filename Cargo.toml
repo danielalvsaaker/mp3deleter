@@ -1,0 +1,11 @@
+[package]
+name = "mp3deleter"
+version = "0.1.0"
+authors = ["danielalvsaaker <daniel@nopemail.net>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+simplemad = "0.9.0"
+structopt = "0.3.15"
