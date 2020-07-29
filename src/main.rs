@@ -1,8 +1,6 @@
 use simplemad::Decoder;
-use std::fs::File;
+use std::fs::{File, remove_file};
 use std::path::PathBuf;
-use std::fs;
-use std::path::Path;
 use std::time::Duration;
 use structopt::StructOpt;
 
@@ -32,7 +30,7 @@ fn main() {
         } 
 
         if bitrate < 191000 {
-            fs::remove_file(&file); 
+            remove_file(&file); 
             println!("Deleting {}", &file.to_str().unwrap()); 
         }
     }
