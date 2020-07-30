@@ -8,10 +8,10 @@ use structopt::StructOpt;
 #[derive(Debug, StructOpt)]
 #[structopt(name = "mp3deleter", about = "Deletes mp3 files with bitrate below 192 kbps.")]
 struct Options {
-    #[structopt(parse(from_os_str))]
+    #[structopt(parse(from_os_str), name = "input file", required = true)]
     input: Vec<PathBuf>,
 
-    #[structopt(short = "r", about = "Delete parent directory.")]
+    #[structopt(short = "r", help = "Delete parent directory")]
     directory: bool,
 }
 
